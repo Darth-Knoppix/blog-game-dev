@@ -51,17 +51,6 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: "gatsby-plugin-fathom",
-      options: {
-        // Fathom server URL. Defaults to `cdn.usefathom.com`
-        trackingUrl: "analytics.sethcorker.com",
-        // Unique site id
-        siteId: "FKAQP",
-        // Domain whitelist
-        whitelistHostnames: ["game-blog.sethcorker.com"],
-      },
-    },
     `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-manifest`,
