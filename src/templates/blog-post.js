@@ -1,10 +1,13 @@
-import React from "react"
+import "./blog-post.css"
+
 import { Link, graphql } from "gatsby"
+import { rhythm, scale } from "../utils/typography"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
+import React from "react"
 import SEO from "../components/seo"
-import { rhythm, scale } from "../utils/typography"
+import Tags from "../components/tags"
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
@@ -36,6 +39,9 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           >
             {post.frontmatter.date}
           </p>
+          <div>
+            <Tags tags={post.frontmatter.tags} />
+          </div>
         </header>
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr
@@ -94,7 +100,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
-        description
+        tags
       }
     }
   }

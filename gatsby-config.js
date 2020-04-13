@@ -1,14 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `A Short Game from Start to Finish`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Seth Corker`,
+      summary: `Software Engineer by day and poor indie dev by night`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
+    description: `The journey from small ideas to working games using whatever I come across`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `Darth_Knoppix`,
     },
   },
   plugins: [
@@ -34,6 +34,7 @@ module.exports = {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 590,
+              showCaptions: true,
             },
           },
           {
@@ -51,17 +52,22 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: "gatsby-plugin-fathom",
       options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
+        // Fathom server URL. Defaults to `cdn.usefathom.com`
+        trackingUrl: "analytics.sethcorker.com",
+        // Unique site id
+        siteId: "FKAQP",
+        // Domain whitelist
+        whitelistHostnames: ["game-blog.sethcorker.com"],
       },
     },
     `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `A Short Game from Start to Finish`,
+        short_name: `Start2Finish`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
