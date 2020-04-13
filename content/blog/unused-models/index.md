@@ -3,7 +3,7 @@ title: "Unused Models"
 date: 2014-06-03T07:15:00.001+12:00
 draft: false
 aliases: ["/2014/06/unused-models.html"]
-tags: [Render, Mental Ray, 3DModelling, Autodesk Maya]
+tags: [Render, Mental Ray, 3D Modelling, Autodesk Maya]
 ---
 
 _This material was created while at the Victoria University of Wellington for a media design class._

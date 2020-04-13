@@ -3,7 +3,7 @@ title: "Asset Creation - Static Meshes: Maya 2014"
 date: 2014-04-25T15:58:00.001+12:00
 draft: false
 aliases: ["/2014/04/asset-creation-static-meshes-maya-2014.html"]
-tags: [3DModelling, Autodesk Maya]
+tags: [3D Modelling, Autodesk Maya]
 ---
 
 I am practising 3D modelling with a few basic assets in Autodesk Maya.

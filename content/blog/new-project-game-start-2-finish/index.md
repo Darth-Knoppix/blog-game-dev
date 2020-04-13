@@ -28,4 +28,4 @@ I will start to plan out the game and learn more advanced C# as I go (I have exp
 
 Check back for my progress and wish me luck!
 
-[http://www.monogame.net/](http://www.monogame.net/)
+[https://www.monogame.net/](https://www.monogame.net/)

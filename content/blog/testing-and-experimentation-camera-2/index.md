@@ -10,7 +10,7 @@ tags: [player, udn, udk, unrealscript, zoom, camera, unreal, coding]
 
 This is another camera set-up with some improvements and disadvantages over the previous one. It allows the player to zoom in by right clicking and when the player dies, the camera does not snap to their position like in the previous set-up. The main disadvantage I have with this implementation is that it intersects the player pawn which is very bad. A combination of the two implementation's could render the best results so far.
 
-The code was modified from [here](http://romerounrealscript.blogspot.co.nz/2012/01/camera-class-unrealscript.html).
+The code was modified from [here](https://romerounrealscript.blogspot.co.nz/2012/01/camera-class-unrealscript.html).
 
 Here it is in action:
 

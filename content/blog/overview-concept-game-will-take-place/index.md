@@ -39,7 +39,7 @@ This can best be described as a third person shooter. It will incorporate advent
 
 **Target Audience**
 
-The target audience is computer gamers, I will target a teenage audience between the ages of 15 and 21. This will allow a wide variety of players but will not be exclusive to this audience and may appeal to older audiences. This will also allow a level of maturity which could not otherwise be achieved with a lower age group becuase of [New Zealand Electronic Game Classification](http://www.censorship.govt.nz/public/public-electronic-games.html) which would require certain criteria to be met. If this game was to be marketed and sold in New Zealand these [requirements](http://www.censorship.govt.nz/pdfword/Guide-to-Video-Game-Labels.pdf) would have to be met for the game to be classified and sold.
+The target audience is computer gamers, I will target a teenage audience between the ages of 15 and 21. This will allow a wide variety of players but will not be exclusive to this audience and may appeal to older audiences. This will also allow a level of maturity which could not otherwise be achieved with a lower age group becuase of [New Zealand Electronic Game Classification](https://www.classificationoffice.govt.nz/about-nz-classification/how-games-are-classified/#who-classifies-games-in-new-zealand) which would require certain criteria to be met. If this game was to be marketed and sold in New Zealand these [requirements](https://www.classificationoffice.govt.nz/about-nz-classification/the-classification-criteria/) would have to be met for the game to be classified and sold.
 
 **Game Flow**
 

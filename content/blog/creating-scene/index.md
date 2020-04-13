@@ -3,7 +3,7 @@ title: "Creating a Scene"
 date: 2014-06-03T07:22:00.000+12:00
 draft: false
 aliases: ["/2014/06/creating-scene.html"]
-tags: [3DModelling, UV, Autodesk Maya]
+tags: [3D Modelling, UV, Autodesk Maya]
 ---
 
 _This material was created while at the Victoria University of Wellington for a media design class._

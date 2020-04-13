@@ -3,7 +3,7 @@ title: "Final Composition"
 date: 2014-06-03T07:31:00.001+12:00
 draft: false
 aliases: ["/2014/06/final-composition.html"]
-tags: [Render, 3DModelling, Autodesk Maya]
+tags: [Render, 3D Modelling, Autodesk Maya]
 ---
 
 _This material was created while at the Victoria University of Wellington for a media design class._

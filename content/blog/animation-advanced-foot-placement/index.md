@@ -20,7 +20,7 @@ tags:
 
 ![](Skel1.jpg)
 
-I have just implemented better foot placement using IK with Unrealscript. It uses code from UDN: [http://udn.epicgames.com/Three/UsingSkeletalControllers.html](http://udn.epicgames.com/Three/UsingSkeletalControllers.html)  
+I have just implemented better foot placement using IK with Unrealscript. It uses code from UDN: [https://udn.epicgames.com/Three/UsingSkeletalControllers.html](https://udn.epicgames.com/Three/UsingSkeletalControllers.html)  
 This provides better foot placement than default so the player mesh actually reacts to the varying surfaces rather than just floating across. Although it is not perfect I believe it is an improvement.
 
 ![](animtree.jpg)
