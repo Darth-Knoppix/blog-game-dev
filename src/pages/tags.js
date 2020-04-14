@@ -10,7 +10,7 @@ const TagsPage = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="All posts" />
+      <SEO title="All tags" />
       <div>
         <h1>Tags</h1>
         <ul>
