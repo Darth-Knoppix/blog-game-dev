@@ -3,10 +3,10 @@ module.exports = {
     title: `A Short Game from Start to Finish`,
     author: {
       name: `Seth Corker`,
-      summary: `Software Engineer by day and poor indie dev by night`,
+      summary: `Software Engineer by day and amateur indie game dev by night`,
     },
     description: `The journey from small ideas to working games using whatever I come across`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    siteUrl: `https://game-blog.sethcorker.com`,
     social: {
       twitter: `Darth_Knoppix`,
     },
