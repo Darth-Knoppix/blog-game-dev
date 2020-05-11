@@ -17,22 +17,33 @@ Godot has everything you need to get going and is easy to start. That's why I de
 
 ## How is it different to Unity?
 
-Unity was my go-to engine becuase it's flexible and easy to use. I like Unreal but it's not suited for my needs most of the time. It's powerful but takes a lot of work to prototype. Godot and Unity and are similiar to use, the first difference that makes Godot stand out is size. Godot is less than 30MB to download. It has a small memory footprint too. Compared with the others, it's lightweight and sharp.
+Unity was my go-to engine becuase it's flexible and easy to use. I like Unreal but it's not suited for my needs most of the time. It's powerful but takes a lot of work to prototype. Godot and Unity and are similiar to use, the first difference that makes Godot stand out is size.
+
+### Lightweight
+
+Godot is less than 30MB to download. It has a small memory footprint too. Compared with the others, it's lightweight and sharp. There's isn't a massive multi-gigabyte download, there isn't even an install. Just download the executable and you're good to go on Windows, Mac or Linux. 
 
 ### Everything is a Node
 
+Unity uses a combination of objects and components. A basic game object can contain different components like physics, materials, scripts, etc. And then you can combine mutliple objects into prefabs so they can be reused throughout your game. Godot does it a little differntly. Everything is a node. Nodes can contain other nodes and you create trees of nodes. Even a game level is just a node that has everything in your level as its children. The one exception is scripts which you attach to any node.
 
+Godot's approach takes a little while to get used to but it has a few benefits. Dealing with level streaming can be as simple as importing a tree of nodes. You don't need to add tags to every object as a way to find things in the scene, you can structure your tree in a way that makes sense. Lastly, it's easy to see what your game logic is doing in the hierarchy of your level. In Unity you can see when objects spawn but in Godot, watching nodes be added can mean audio, texture, physics nodes are being added and removed. It makes for a very flexible system that's fun to use and easy to hack together.
+
+### GDScript, C#, C++ or visual scripting
+
+Godot gives you options for coding, you can get away with GDScript, a python like language that makes game logic a dream.
+- Use **C#** if you're coming from Unity or XNA/MonoGame and want a familiar and powerful language.
+- Use **C++** if you want to get down into the nitty gritty of the engine and write very performant code.
+- **Visual scripting** is great for level logic and I use it for shaders too.
+- There are also community supported languages if you don't find something you like, one of them is **Python**!
 
 ## Making a 2D prototype in Godot 
 
+I decided to jump in and give Godot a try, I've tinkered with the engine over the past few weeks but this time I decided to make a prototype over a couple of hours. Something that proves a concept, it's a basic asteroids like ship with planets that have gravitational pull.
 
-```gdscript
-extends StaticBody2D
+### Ship movement
 
-func _process(delta):
-	rotation += delta * 0.05
-```
-
+The first piece of code we need is something to control our ship. To get a ship-like feel, we apply some force when the up action is pressed (set in the input manager as the 'W' key). Then left and right control our rotation. That's it. It's not perfect and could defintiely use some tweaking to get the right feel but for a quick prototype, it's fine for now.
 
 ```gdscript
 extends RigidBody2D
@@ -53,7 +64,21 @@ func _integrate_forces(state):
 
 	applied_torque = rotation_dir * torque
 ```
+_Movement is pretty simple_
 
+### Let's make the planets (asteroids in this case) rotate
+
+Giving the asteroids rotation was simnple, I just added a script to the node to rotate a little bit every frame. Using GDScript, the code compact and easy to read.
+
+```gdscript
+extends StaticBody2D
+
+func _process(delta):
+	rotation += delta * 0.05
+```
+_Rotating the planet is as easy as this simple script_
+
+### Adding a particle emitter for the thruster
 
 ```gdscript
 extends Particles2D
@@ -64,3 +89,4 @@ func _process(delta):
 	else:
 		emitting = false
 ```
+_Again, turning the emitter on and off is another short script_
