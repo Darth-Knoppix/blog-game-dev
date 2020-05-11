@@ -1,6 +1,6 @@
 ---
 title: "Discovering Godot"
-date: 2020-05-10T17:34:00.000+01:00
+date: 2020-05-11T08:24:14.829Z
 draft: false
 tags: ["Godot", "2D", "Programming", "GDScript"]
 ---
@@ -127,4 +127,6 @@ _Again, turning the emitter on and off is another short script_
 
 There you have it. This was my first time making something even remotely resembling a game in the past few years. There is something about Godot that makes it appealing enough for me to tinker with it in my free time. It reminds me of when I would make stupid prototypes in GameMaker when I was a teenager.
 
-_Thank [https://kenney.nl/](https://kenney.nl/) for the assets I used here, they are free to use and are my go-to for prototyping ideas._
+---
+
+**Thanks to [https://kenney.nl/](https://kenney.nl/) for the assets I used here, they are free to use and are my go-to for prototyping ideas.**
