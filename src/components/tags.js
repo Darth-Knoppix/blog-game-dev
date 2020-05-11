@@ -1,14 +1,8 @@
-import { Link } from "gatsby"
-import React from "react"
-import kebabCase from "lodash/kebabCase"
+/** @jsx jsx */
+import { Container, Styled, jsx } from "theme-ui"
 
-const tagStyle = {
-  listStyle: "none",
-  backgroundColor: "rgba(0,0,0,0.1)",
-  borderRadius: "1rem",
-  display: "inline-block",
-  marginRight: "0.75rem",
-}
+import { Link } from "gatsby"
+import kebabCase from "lodash/kebabCase"
 
 const linkStyle = {
   display: "block",
@@ -21,9 +15,18 @@ const linkStyle = {
 
 const Tags = ({ tags }) => {
   return (
-    <ul style={{ marginBottom: "0.75rem" }}>
+    <ul sx={{ mb: 2, padding: 0 }}>
       {tags.map(tag => (
-        <li style={tagStyle}>
+        <li
+          sx={{
+            listStyle: "none",
+            backgroundColor: "rgba(0,0,0,0.1)",
+            borderRadius: 3,
+            display: "inline-block",
+            mr: 1,
+          }}
+          key={tag}
+        >
           <Link to={`/tags/${kebabCase(tag)}/`} style={linkStyle}>
             {tag}
           </Link>

@@ -1,24 +1,27 @@
 import os
 import wget
 
-current_dir = "/Users/seth.corker/projects/personal/game-start-2-finish/content/blog/"
+current_dir = "/Users/seth.corker/projects/personal/benevolent-bytes-blog/content/posts/"
 
 os.chdir(current_dir)
-image_start = "[![]("
+image_start = "![]("
 
 for folder in os.listdir():
+    if folder.startswith("."):
+        continue
     os.chdir(current_dir + "/" + folder)
-    file = open("index.md", "r")
+    file = open("index.mdx", "r")
     content = file.readlines()
-
-    new_file_content = ""
 
     # download images
     for line in content:
+        if line.startswith("![](/content"):
+            continue
         if line.startswith(image_start):
-            hyperlink = line.replace(image_start, "")
-            hyperlink = hyperlink.rsplit(")]")[0]
+            hyperlink = line.replace("![](", "")
 
-            wget.download(hyperlink)
+            hyperlink = hyperlink.rsplit(")")[0].strip()
+
+            os.system("wget --no-check-certificate " + hyperlink)
 
     file.close()

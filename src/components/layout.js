@@ -1,28 +1,27 @@
-import React from "react"
+/** @jsx jsx */
+
+import { Container, Styled, jsx, useColorMode } from "theme-ui"
+
 import { Link } from "gatsby"
 
-import { rhythm, scale } from "../utils/typography"
-
 const Layout = ({ location, title, children }) => {
+  const [colorMode] = useColorMode()
+  const isDark = colorMode === `dark`
+
   const rootPath = `${__PATH_PREFIX__}/`
   let header
 
   if (location.pathname === rootPath) {
     header = (
       <h1
-        style={{
-          ...scale(1.5),
-          marginBottom: rhythm(1.5),
-          marginTop: 0,
+        sx={{
+          mb: 3,
+          mt: 1,
+          fontSize: 7,
+          lineHeight: 1.1,
         }}
       >
-        <Link
-          style={{
-            boxShadow: `none`,
-            color: `inherit`,
-          }}
-          to={`/`}
-        >
+        <Link sx={{ textDecoration: "none" }} to={`/`}>
           {title}
         </Link>
       </h1>
@@ -48,22 +47,38 @@ const Layout = ({ location, title, children }) => {
     )
   }
   return (
-    <div
-      style={{
-        marginLeft: `auto`,
-        marginRight: `auto`,
-        maxWidth: rhythm(24),
-        padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-      }}
-    >
-      <header>{header}</header>
-      <main>{children}</main>
-      <footer>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.org">Gatsby</a>
-      </footer>
-    </div>
+    <Styled.root data-testid="theme-root">
+      <Container
+        p={1}
+        sx={{
+          "*": {
+            boxSizing: `inherit`,
+          },
+          body: {
+            margin: 0,
+            padding: 0,
+            boxSizing: `border-box`,
+            textRendering: `optimizeLegibility`,
+          },
+          "::selection": {
+            backgroundColor: `primary`,
+            color: `white`,
+          },
+          a: {
+            transition: `all 0.3s ease-in-out`,
+            color: `text`,
+          },
+        }}
+      >
+        <header>{header}</header>
+        <main>{children}</main>
+        <footer>
+          © {new Date().getFullYear()}, Built with
+          {` `}
+          <a href="https://www.gatsbyjs.org">Gatsby</a>
+        </footer>
+      </Container>
+    </Styled.root>
   )
 }
 
