@@ -38,9 +38,11 @@ const SEO = ({ description, lang, meta, title }) => {
       title={title}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
       script={[
-        {
-          type: "text/javascript",
-          innerHTML: `
+        process.env.NODE_ENV === "development"
+          ? null
+          : {
+              type: "text/javascript",
+              innerHTML: `
 (function(f, a, t, h, o, m){
 	a[h]=a[h]||function(){
 		(a[h].q=a[h].q||[]).push(arguments)
@@ -52,8 +54,8 @@ const SEO = ({ description, lang, meta, title }) => {
 })(document, window, '//analytics.sethcorker.com/tracker.js', 'fathom');
 fathom('set', 'siteId', 'FKAQP');
 fathom('trackPageview');`,
-        },
-      ]}
+            },
+      ].filter(Boolean)}
       meta={[
         {
           name: `description`,
