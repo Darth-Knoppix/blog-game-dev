@@ -23,7 +23,7 @@ const Tags = ({ tags }) => {
   return (
     <ul style={{ marginBottom: "0.75rem" }}>
       {tags.map(tag => (
-        <li style={tagStyle}>
+        <li style={tagStyle} key={tag}>
           <Link to={`/tags/${kebabCase(tag)}/`} style={linkStyle}>
             {tag}
           </Link>
