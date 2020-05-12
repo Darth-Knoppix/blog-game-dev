@@ -6,6 +6,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
   const blogPost = path.resolve(`./src/templates/blog-post.js`)
+  const ampBlogPost = path.resolve(`./src/templates/blog-post.amp.js`)
   const tagTemplate = path.resolve(`./src/templates/tags.js`)
 
   const result = await graphql(
@@ -47,14 +48,23 @@ exports.createPages = async ({ graphql, actions }) => {
     const previous = index === posts.length - 1 ? null : posts[index + 1].node
     const next = index === 0 ? null : posts[index - 1].node
 
+    const context = {
+      slug: post.node.fields.slug,
+      previous,
+      next,
+    }
+
     createPage({
       path: post.node.fields.slug,
       component: blogPost,
-      context: {
-        slug: post.node.fields.slug,
-        previous,
-        next,
-      },
+      context,
+    })
+
+    // Create AMP apge
+    createPage({
+      path: `${post.node.fields.slug}amp`,
+      component: ampBlogPost,
+      context,
     })
   })
 
