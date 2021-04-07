@@ -1,5 +1,5 @@
 import { Link, graphql } from "gatsby"
-
+import styles from "./styles.css"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import React from "react"
@@ -14,19 +14,32 @@ const BlogIndex = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />
       <Bio />
+
+      <p
+        style={{
+          marginBottom: rhythm(1),
+          marginTop: rhythm(1),
+          padding: rhythm(1),
+          backgroundColor: "rgba(0,0,0,0.1)",
+          borderRadius: "0.25rem",
+        }}
+      >
+        This blog is a collection of experiments and thoughts on game
+        development. I'm not an indie developer but I'm interested in videos
+        games and link to tinker with game engines when I get the chance.
+      </p>
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
         return (
           <article key={node.fields.slug}>
             <header>
               <h3
+                className="article-title"
                 style={{
                   marginBottom: rhythm(1 / 4),
                 }}
               >
-                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                  {title}
-                </Link>
+                <Link to={node.fields.slug}>{title}</Link>
               </h3>
               <small>{node.frontmatter.date}</small>
             </header>

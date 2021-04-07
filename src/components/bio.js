@@ -25,10 +25,6 @@ const Bio = () => {
         siteMetadata {
           author {
             name
-            summary
-          }
-          social {
-            twitter
           }
         }
       }
@@ -40,7 +36,6 @@ const Bio = () => {
     <div
       style={{
         display: `flex`,
-        marginBottom: rhythm(2.5),
       }}
     >
       <Image
@@ -57,11 +52,13 @@ const Bio = () => {
         }}
       />
       <p>
-        Written by <strong>{author.name}</strong> {author.summary}
-        {` `}
-        <a href={`https://twitter.com/${social.twitter}`}>
-          follow his follies on Twitter
-        </a>
+        Written by <a href="https://sethcorker.com">{author.name}</a>, senior
+        software engineer and tech lead at Zego during the day and I tinker with
+        game dev at night. Check out my{" "}
+        <a href="https://blog.sethcorker.com">
+          frontend engineering blog, Benevolent Bytes
+        </a>{" "}
+        where I share what I know about web development and React.
       </p>
     </div>
   )

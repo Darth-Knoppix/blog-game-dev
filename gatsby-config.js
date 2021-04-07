@@ -3,7 +3,6 @@ module.exports = {
     title: `A Short Game from Start to Finish`,
     author: {
       name: `Seth Corker`,
-      summary: `Software Engineer by day and amateur indie game dev by night`,
     },
     description: `The journey from small ideas to working games using whatever I come across`,
     siteUrl: `https://game-blog.sethcorker.com`,
@@ -60,7 +59,7 @@ module.exports = {
         short_name: `Start2Finish`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
+        theme_color: `#f56565`,
         display: `minimal-ui`,
         icon: `content/assets/logo.png`,
       },
