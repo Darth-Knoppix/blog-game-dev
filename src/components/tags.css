@@ -1,0 +1,16 @@
+.tag {
+    list-style: none;
+    background-color: #0000001a;
+    border-radius: 1rem;
+    display: inline-block;
+    margin-right: 0.75rem
+}
+
+.tag-link {
+    display: block;
+    text-decoration: none;
+    box-shadow: none;
+    color: inherit;
+    font-family: sans-serif;
+    padding: 0.1rem 1rem;
+}

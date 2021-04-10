@@ -1,5 +1,6 @@
 import { Link, graphql } from "gatsby"
 import styles from "./styles.css"
+import Tags from "../components/tags"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import React from "react"
@@ -33,15 +34,15 @@ const BlogIndex = ({ data, location }) => {
         return (
           <article key={node.fields.slug}>
             <header>
-              <h3
-                className="article-title"
-                style={{
-                  marginBottom: rhythm(1 / 4),
-                }}
-              >
-                <Link to={node.fields.slug}>{title}</Link>
-              </h3>
-              <small>{node.frontmatter.date}</small>
+              <div className="header-meta" style={{
+                marginBottom: rhythm(1 / 4),
+              }}>
+                <h3 className="article-title">
+                  <Link to={node.fields.slug}>{title}</Link>
+                </h3>
+                <small className="date-label">{node.frontmatter.date}</small>
+              </div>
+              <Tags tags={node.frontmatter.tags.slice(0, 5)} small />
             </header>
             <section>
               <p
@@ -76,6 +77,7 @@ export const pageQuery = graphql`
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
+            tags
           }
         }
       }

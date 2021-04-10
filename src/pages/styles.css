@@ -25,3 +25,16 @@ a:hover {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 700;
 }
+
+.date-label {
+  font-size: 0.75em;
+  font-weight: 300;
+  min-width: 10rem;
+  text-align: right;
+}
+
+.header-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}

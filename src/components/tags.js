@@ -1,30 +1,14 @@
 import { Link } from "gatsby"
 import React from "react"
 import kebabCase from "lodash/kebabCase"
+import styles from "./tags.css"
 
-const tagStyle = {
-  listStyle: "none",
-  backgroundColor: "rgba(0,0,0,0.1)",
-  borderRadius: "1rem",
-  display: "inline-block",
-  marginRight: "0.75rem",
-}
-
-const linkStyle = {
-  display: "block",
-  textDecoration: "none",
-  boxShadow: "none",
-  color: "inherit",
-  fontFamily: "sans-serif",
-  padding: "0.1rem 1rem",
-}
-
-const Tags = ({ tags }) => {
+const Tags = ({ tags, small = false }) => {
   return (
-    <ul style={{ marginBottom: "0.75rem" }}>
+    <ul style={{ marginBottom: small ? "0.125rem" : "0.75rem" }}>
       {tags.map(tag => (
-        <li style={tagStyle} key={tag}>
-          <Link to={`/tags/${kebabCase(tag)}/`} style={linkStyle}>
+        <li className="tag" key={tag} style={{ marginBottom: small ? '0.1rem': undefined }}>
+          <Link to={`/tags/${kebabCase(tag)}/`} className="tag-link" style={{ padding: small ? '0.2rem 0.5rem' : undefined, fontSize: small ? '0.7em' : undefined }}>
             {tag}
           </Link>
         </li>
