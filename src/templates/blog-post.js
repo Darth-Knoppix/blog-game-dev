@@ -44,6 +44,45 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           </div>
         </header>
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
+        {post.frontmatter.demo && (
+          <div style={{ marginBottom: 32 }}>
+            <h3>A playable demo</h3>
+            <div
+              style={{
+                position: "relative",
+                height: post.frontmatter.demo.height || 600,
+                width: post.frontmatter.demo.width || 800,
+                marginLeft: `calc((${
+                  post.frontmatter.demo.width || 800
+                }px - ${rhythm(24)}) * -0.5)`,
+                marginRight: `calc((${
+                  post.frontmatter.demo.width || 800
+                }px - ${rhythm(24)}) * -0.5)`,
+              }}
+            >
+              <div
+                style={{
+                  position: "absolute",
+                  width: post.frontmatter.demo.width || 800,
+                }}
+              >
+                <iframe
+                  src={post.frontmatter.demo.src}
+                  width={post.frontmatter.demo.width || 800}
+                  height={post.frontmatter.demo.height || 600}
+                />
+              </div>
+            </div>
+            {post.frontmatter.demo.description && (
+              <p
+                style={{ marginTop: 16 }}
+                dangerouslySetInnerHTML={{
+                  __html: post.frontmatter.demo.description,
+                }}
+              />
+            )}
+          </div>
+        )}
         <hr
           style={{
             marginBottom: rhythm(1),
@@ -101,6 +140,12 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         tags
+        demo {
+          src
+          width
+          height
+          description
+        }
       }
     }
   }

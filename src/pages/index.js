@@ -26,7 +26,7 @@ const BlogIndex = ({ data, location }) => {
         }}
       >
         This blog is a collection of experiments and thoughts on game
-        development. I'm not an indie developer but I'm interested in videos
+        development. I'm not an indie developer but I'm interested in video
         games and link to tinker with game engines when I get the chance.
       </p>
       {posts.map(({ node }) => {
