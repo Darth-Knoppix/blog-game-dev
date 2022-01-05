@@ -98,5 +98,5 @@ The collision and scripting can be encapsulated in the scene and in the Spawner 
 
 I've learned a lot from this simple clone and I hope to carve out some more time to create other clones and build my skills with Godot. It does't seem like much but, for me this is the first step to getting into game development properly and doing something a bit different from my day job.
 
-- The assets in the game come from (Tappy Plane by Kenney)[https://kenney.nl/assets/tappy-plane]
+- The assets in the game come from [Tappy Plane by Kenney](https://kenney.nl/assets/tappy-plane)
 - The game source is available in the [godot-game-experiments/FlappyBirdClone repo on GitHub](https://github.com/Darth-Knoppix/godot-game-experiments/tree/master/FlappyBirdClone)

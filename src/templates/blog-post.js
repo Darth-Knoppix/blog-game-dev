@@ -48,10 +48,10 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           <div style={{ marginBottom: 32 }}>
             <h3>A playable demo</h3>
             <div
+              className="demo-container"
               style={{
-                position: "relative",
-                height: post.frontmatter.demo.height || 600,
-                width: post.frontmatter.demo.width || 800,
+                height: post.frontmatter.demo.height,
+                width: post.frontmatter.demo.width,
                 marginLeft: `calc((${
                   post.frontmatter.demo.width || 800
                 }px - ${rhythm(24)}) * -0.5)`,
@@ -61,12 +61,14 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
               }}
             >
               <div
+                className="demo-wrapper"
                 style={{
                   position: "absolute",
                   width: post.frontmatter.demo.width || 800,
                 }}
               >
                 <iframe
+                  className="demo-iframe"
                   src={post.frontmatter.demo.src}
                   width={post.frontmatter.demo.width || 800}
                   height={post.frontmatter.demo.height || 600}
